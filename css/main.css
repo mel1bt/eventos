@@ -1,12 +1,12 @@
 body {
-    background-color:darkblue;
+    background-color:azure;
 }
 #insert-comm { 
     position: relative
     width: 600px;
     border-radius: 20px;
 text-align: center;
-    background-color: aliceblue;
+ background-color:#5882FA;
     padding: 10px;
 }
 p {
@@ -19,5 +19,7 @@ p {
     padding: 10px;
     border: 5px solid azure;
     width: 200px;
-
+}
+.colorLim{
+    color: red;
 }
