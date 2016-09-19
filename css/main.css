@@ -1,0 +1,23 @@
+body {
+    background-color:darkblue;
+}
+#insert-comm { 
+    position: relative
+    width: 600px;
+    border-radius: 20px;
+text-align: center;
+    background-color: aliceblue;
+    padding: 10px;
+}
+p {
+    position: relative;
+    background-color: aquamarine;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px; 
+    font-style: italic;
+    padding: 10px;
+    border: 5px solid azure;
+    width: 200px;
+
+}
