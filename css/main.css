@@ -1,25 +1,41 @@
+* {
+    position: relative;
+    box-sizing:content-box;
+}
 body {
-    background-color:azure;
+    background-image: url(http://www.solofondos.com/wp-content/uploads/2015/12/Fondos-de-twitter.jpg);
+    
 }
 #insert-comm { 
     position: relative
     width: 600px;
     border-radius: 20px;
-text-align: center;
- background-color:#5882FA;
-    padding: 10px;
-}
-p {
-    position: relative;
-    background-color: aquamarine;
     text-align: center;
+    background-color : rgba(37,168,236, 0.3);
+    padding: 10px;
+    
+}
+textarea{
+    overflow:hidden;
+    resize: none;
+    height: 5rem;
+}
+.comentario {
+    position: relative;
+    background-color: rgba(127,255,212, 0.4);
+    text-align: left;
     margin: 10px;
     border-radius: 10px; 
     font-style: italic;
     padding: 10px;
     border: 5px solid azure;
     width: 200px;
+    box-sizing: content-box;
 }
-.colorLim{
-    color: red;
+.horaActual {
+    text-align: right;
+    color:darkblue;
+}
+.profile{
+    width: 100px;
 }

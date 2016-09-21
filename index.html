@@ -2,22 +2,34 @@
 <html lang="es">                     
 <head>
 	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
     <div id="insert-comm">
-        <form action="">
+        <form action="" class="form-group">
             <h1>Tweet</h1>
-            <textarea name="" id="textA" cols="70" rows="3" placeholder="Ingrese su comentario aqui..."  ></textarea>
-            <button type="button" id="calcular">Enviar</button>
-            <p id="contar"></p>
+            <div class="row">
+            <div class="col-xs-6 ">
+                <img src="img/profile.jpg" class="pull-xs-left profile" alt="" >
+            </div>
+            <div class="col-xs-6 ">
+                <textarea name="textoText" id="textA"  placeholder="Ingrese su comentario aqui..." rows="2" cols="50"></textarea><br>
+                 <button type="button" id="calcular">Enviar</button><br>
+                 <p id="contar"></p>
+            </div>
+            </div>
+            
         </form>
 	</div>
 	<div id="contenedor"></div>
-
+	<script src="js/tether.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/app.js">
-		
 	</script>
 </body>
 </html>

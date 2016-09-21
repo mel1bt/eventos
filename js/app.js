@@ -1,40 +1,62 @@
-
 window.onload = function () {
 	var boton  = document.getElementById("calcular");
-    var cadena = "";
-    
+    var textAr = document.getElementById("textA");
+    var contenedor = document.getElementById("contenedor");
+    var textContar = document.getElementById("contar");
     boton.disabled=true;   
 	boton.addEventListener("click", function() {
-        /*
-        textArea = document.getElementById("textA").value;
-        var nodo = document.createTextNode(textArea);
-        var crearP = document.createElement("p");
-        crearP.appendChild(nodo);
-         var contenedor = document.getElementById("contenedor");
-        contenedor.insertBefore(crearP, list.childNodes[0]);
-        
-        document.getElementById("two").classList.add("borde-azul");
-        */
-        var textArea = document.getElementById("textA").value;
-        var crearDiv = document.createElement("p");
+        var textArea = textAr.value;
+        var crearDiv = document.createElement("div");
+        crearDiv.classList.add("comentario");
         crearDiv.innerHTML = textArea;
-        var contenedor = document.getElementById("contenedor");
         contenedor.insertBefore(crearDiv,contenedor.childNodes[0]);
-        document.getElementById("textA").value = "";  
+        document.getElementById("contar").innerHTML=140;
         boton.disabled=true;  
+        textAr.value="";
+        var hora = document.createTextNode(horaNow());
+        var crearHr = document.createElement("p");
+        crearHr.classList.add("horaActual");
+        crearHr.appendChild(hora);
+        crearDiv.insertBefore(crearHr,crearDiv.childNodes[1]);
     });
-    
-    var textAr =document.getElementById("textA");
     textAr.addEventListener("keydown", function(){ 
-        boton.disabled=false; 
+        var contador = document.getElementById("contar");
         var numLim = 140;
-        var numLong = document.getElementById("textA").value.length;
-        document.getElementById("contar").innerHTML = numLim - numLong; 
-        if (numLong >= numLim){
-            document.getElementById("contar").classList.add("colorLim");
+        var numLong = textAr.value.length;
+        contador.innerHTML = numLim - numLong; 
+        var textArSolo = textAr.value.replace(/\s/g,"");//para reemplazar los espacios en blanco
+        if( numLong == 0 || numLong >= numLim || textArSolo == 0){// condicional para desactivar el boton
             boton.disabled=true;
-        }   
-    });                             
+        }else{
+            boton.disabled=false;
+        } 
+        if (numLong <= 120){ // condicional para los colores
+            contador.style.color = "black";
+        }else if (numLong <= 130){
+            contador.style.color = "green";
+        }else if (numLong >= 140){
+            contador.style.color =  "red";
+        }else{
+            contador.style.color = "blue";
+        }
+    });  
+    textAr.addEventListener("keyup", function(){
+        var el = this;
+        el.style.cssText = 'padding:0; height:' + el.scrollHeight + 'px';
+     });
+    function horaNow(){
+        var d = new Date();
+        var hr = d.getHours();
+        var min = d.getMinutes();
+        if (hr<10){
+            hr = "0" +  hr;
+        }
+        if (min<10){
+            min = "0" +  min;
+        }
+        return (hr + ":" + min);
+    } 
 }
+
 
  
