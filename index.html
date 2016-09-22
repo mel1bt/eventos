@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>Tweet</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -12,17 +12,11 @@
     <div id="insert-comm">
         <form action="" class="form-group">
             <h1>Tweet</h1>
-            <div class="row">
-            <div class="col-xs-6 ">
-                <img src="img/profile.jpg" class="pull-xs-left profile" alt="" >
-            </div>
-            <div class="col-xs-6 ">
+            <div>
                 <textarea name="textoText" id="textA"  placeholder="Ingrese su comentario aqui..." rows="2" cols="50"></textarea><br>
-                 <button type="button" id="calcular">Enviar</button><br>
-                 <p id="contar"></p>
+                 <button type="button" id="calcular" class="btn btn-success">Enviar</button><br>
+                 <span># de caracteres: </span><span id="contar"></span>
             </div>
-            </div>
-            
         </form>
 	</div>
 	<div id="contenedor"></div>
